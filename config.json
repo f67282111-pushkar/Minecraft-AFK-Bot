@@ -1,6 +1,10 @@
 {
-  "serverHost": "example.aternos.me",
-  "serverPort": 12345,
-  "botUsername": "MyBot",
-  "botChunk": 1
+  "serverHost": "BloodstealSMP-Fewe.aternos.me",
+  "serverPort": 18611,
+  "botUsername": "f67282111",
+  "botChunk": 1,
+  "movement_interval": 30,
+  "rotation_interval": 20,
+  "attack_interval": 45,
+  "reconnect_delay": 5
 }
