@@ -2,10 +2,10 @@ const mineflayer = require('mineflayer');
 const config = require('./config.json');
 
 const bot = mineflayer.createBot({
-  host: config.serverHost,
-  port: config.serverPort,
-  username: config.botUsername,
-  auth: 'offline',
+  host: config.BloodstealSMP-Fewe.aternos.me,
+  port: config.18611,
+  username: config.SenpaiFan,
+  auth: 'online',
   version: false,
   viewDistance: config.botChunk
 });
@@ -18,7 +18,7 @@ const JUMP_DURATION = 500;
 bot.on('spawn', () => {
   setTimeout(() => {
     bot.setControlState('sneak', true);
-    console.log(`✅ ${config.botUsername} is Ready!`);
+    console.log(`✅ ${config.SenpaiFan} is Ready!`);
   }, 3000);
 
   setTimeout(movementCycle, STEP_INTERVAL);
