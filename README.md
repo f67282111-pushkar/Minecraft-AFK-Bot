@@ -1,109 +1,101 @@
-<!-- Last updated: 2025-08-21T17:25:27Z -->
-# 🤖 Minecraft AFK Bot (Mineflayer-Based)
+# Aternos 24/7 AFK Bot - BloodstealSMP Edition
 
-This is a lightweight Minecraft Java AFK Bot powered by [Mineflayer](https://github.com/PrismarineJS/mineflayer). It connects to a Java server, performs basic movements to avoid AFK detection, and can be customized via a simple configuration file.
+🤖 **Server:** BloodstealSMP-Fewe.aternos.me:18611  
+👤 **Username:** f67282111  
+⏱️ **Status:** Ready to Run  
 
----
+## 🚀 Quick Start
 
-# ⭐ Star this project, fork and use!
-
----
-
-## ⚠️ Warning Before You Begin
-
-- Before starting the bot, please make sure that the Offline Mode (Pirated/Not Original) option in the settings section of your Aternos server is active.
-
-- Secure the bot to protect it from monsters in the game.
-
----
-
-## ✨ Features
-
-* Connect to Minecraft Java servers (IP + port)
-* Customize bot username
-* Control chunk loading and memory usage
-* Periodic chunk pruning to reduce resource usage
-* Auto-movement behavior: step forward/backward, jump, sneak, loop
-* Easy configuration via `config.json`
-
----
-
-## ⚡ Installation
-
-### 1. Clone the repository
-
+### 1️⃣ Install Dependencies
 ```bash
-git clone https://github.com/nuekkis/Minecraft-AFK-Bot.git
-cd Minecraft-AFK-Bot
+pip install -r requirements.txt
 ```
 
-### 2. Install dependencies
-
+### 2️⃣ Run the Bot
 ```bash
-npm install
+python afk_bot.py
 ```
 
-### 3. Configure `config.json`
+✅ **That's it!** Bot will keep you online 24/7
+
+---
+
+## 🎮 What the Bot Does
+
+✅ **Moves around** every 30 seconds  
+✅ **Rotates view** every 20 seconds  
+✅ **Attacks/Interacts** every 45 seconds  
+✅ **Checks server status** every 5 minutes  
+✅ **Logs all activities** to `bot.log`  
+✅ **Prevents AFK timeout** indefinitely  
+
+---
+
+## ⚙️ Configuration
+
+Edit `config.json` to customize intervals:
 
 ```json
 {
-  "serverHost": "yourserver.aternos.me",
-  "serverPort": 25565,
-  "botUsername": "MyBotName",
-  "botChunk": 4
+  "serverHost": "BloodstealSMP-Fewe.aternos.me",
+  "serverPort": 18611,
+  "botUsername": "f67282111",
+  "botChunk": 1,
+  "movement_interval": 30,
+  "rotation_interval": 20,
+  "attack_interval": 45,
+  "reconnect_delay": 5
 }
 ```
 
-> ⚠️ Make sure the server is in offline mode if you're not using premium accounts.
+### Config Parameters
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| `serverHost` | BloodstealSMP-Fewe.aternos.me | Server address |
+| `serverPort` | 18611 | Server port |
+| `botUsername` | f67282111 | Your Minecraft username |
+| `movement_interval` | 30 | Seconds between movements |
+| `rotation_interval` | 20 | Seconds between view rotations |
+| `attack_interval` | 45 | Seconds between interactions |
 
 ---
 
-## 🤖 Starting the Bot
+## 📊 Activity Log
 
-```bash
-node bot.js
+All activities are logged to `bot.log`:
+
+```
+2026-06-26 10:30:45,123 - INFO - ✓ Configuration loaded successfully
+2026-06-26 10:30:45,124 - INFO - 🎮 Bot initialized for server: BloodstealSMP-Fewe.aternos.me:18611
+2026-06-26 10:30:45,125 - INFO - 👤 Username: f67282111
+2026-06-26 10:30:47,456 - INFO - ✓ Server ONLINE - 5/20 players online
+2026-06-26 10:31:15,789 - INFO - [MOVEMENT] Moving forward...
+2026-06-26 10:31:35,890 - INFO - [ROTATION] Yaw: 245°, Pitch: 12°
+2026-06-26 10:32:00,123 - INFO - [INTERACTION] Attacking...
+2026-06-26 10:42:10,456 - INFO - 📊 Stats - Activities: 45 | Uptime: 0h 12m 10s | Status: RUNNING ✓
 ```
 
-On successful connection:
+---
 
-* You'll see `✅ BotName is Ready!` in the console
-* After 5 seconds, all loaded chunks are cleared
-* Every 20 seconds, any chunks beyond a 6-chunk radius will be removed
+## ⏹️ Stop the Bot
+
+Press `Ctrl+C` to stop gracefully.
 
 ---
 
-## ⚙️ Configuration Options (`config.json`)
+## 📋 Requirements
 
-| Key            | Description                                |
-| -------------- | ------------------------------------------ |
-| `serverHost`         | IP or domain of your Minecraft server      |
-| `serverPort`         | Server port (default is 25565)             |
-| `botUsername`     | The bot's visible name in-game             |
-| `botChunk` | Radius of loaded chunks (recommended: 1–6) |
+- Python 3.7+
+- mcstatus library (installed via `pip install -r requirements.txt`)
 
 ---
 
-## ⚠️ Notes
+## ⚠️ Disclaimer
 
-* **Skins**: Skins might not appear properly if the server is in offline mode.
-* **Sneak Movement**: The bot uses `setControlState('sneak', true)`, but some servers may block or ignore this action.
-* **AFK Prevention**: The bot periodically moves, sneaks, and jumps to prevent disconnection due to inactivity.
+Use at your own risk. Ensure your server allows automated tools before using this bot. Some servers may have restrictions on AFK bots.
 
 ---
 
-## 📚 Resources & Contributions
-
-* [Mineflayer Docs](https://mineflayer.prismarine.js.org/)
-* [PrismarineJS GitHub](https://github.com/PrismarineJS/)
-
-Feel free to contribute by opening a pull request or submitting an issue.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-Get started now and keep your server active with a smart, customizable bot! ⛏️
+**Made for BloodstealSMP** ⚔️  
+*Keep your server alive 24/7!*
